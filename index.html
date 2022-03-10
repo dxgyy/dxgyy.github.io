@@ -21,9 +21,10 @@
 }
 #child2{
    position:relative;
-   width:60%;
+   width:43%;
    left:20%;
-   color:#f5351A;
+   color:#000000;
+   float:left
 }
 #child3{
    position:relative;
@@ -52,16 +53,48 @@ span.apple-style-span
 	{}
 </style>
 <![endif]-->
+<script language="javascript">
+    var t = null;
+    t = setTimeout(time,1000);//开始执行
+    function time()
+    {
+       clearTimeout(t);//清除定时器
+       dt = new Date();
+       var y=dt.getYear()+1900;
+       var mm=dt.getMonth()+1;
+       var d=dt.getDate();
+       var weekday=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+       var day=dt.getDay();
+       var h=dt.getHours();
+       var m=dt.getMinutes();
+       var s=dt.getSeconds();
+
+       if(h<10){h="0"+h;}
+       if(m<10){m="0"+m;}
+       if(s<10){s="0"+s;}
+
+       document.getElementById("timeShow").innerHTML =  "现在时间："+y+"年"+mm+"月"+d+"日"+weekday[day]+" "+h+":"+m+":"+s+"";
+       t = setTimeout(time,1000); //设定定时器，循环执行 
+    }
+</script>
+  <style>
+
+    .time1{width:100%;  background:#ffffff; line-height:400%; color:#f5351A; text-align:left;}
+
+  </style>
 </HEAD>
 <BODY bgColor=#FFFFFF leftMargin=0 topMargin=0 link="#0000FF" vlink="#800080" style="text-align: center"  rightmargin="0" bottommargin="0" marginwidth="15" marginheight="15" alink="#FF0000">
 <div id="container">        
         			
 		
 		<div id = "child2">
-		<p style="line-height: 200%; text-indent:0px; margin-top:0; margin-bottom:0;" align="left" >
-				<strong>董小刚</p>
-		<hr style="border:2 dashed #987cb9" width="100%" color=#987cb9 SIZE=2>
+		<p style="line-height: 200%; text-indent:0px; margin-top:0; margin-bottom:0;width:25%" align="center" >
+				<strong>Xiaogang Dong(董小刚)</p> 
+	    <p style="line-height: 200%; text-indent:0px; margin-top:0; margin-bottom:0;width:25%" align="center">
+				<strong>Email:dxg110@aliyun.com</p> 
 		</div>
+		<div id = "child2" align="left"><div id="timeShow" class="time1"></div> </div>
+		<hr style="border:2 dashed #987cb9" width="60%" color=#987cb9 SIZE=2>
 		
 		<!--<div id = "child1" style="background:url(./img/bimg.jpg);">
 		<p align="left"><font face="Times New Roman">&nbsp; ▏<a href="#"><span style="text-decoration: none">链接1</span></a> ▏ 
@@ -139,7 +172,9 @@ span.apple-style-span
 			<hr width="100%" color=#987cb9 SIZE=2>
 		
 		<p style="line-height: 150%" align="right">
-				<font face="Times New Roman">更新日期: 2021.11.21</font></p>
+		        
+				<!--<font face="Times New Roman">更新日期: 2021.11.21</font></p> -->
 		</div>
+		<div id="timeShow" class="time1"></div>
 </div>
 </BODY></HTML>
