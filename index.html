@@ -12,25 +12,39 @@
 #container{
    position:relative;
    width:100%;
-   height:100px;
+   height:auto;
 }
 #child1{
    position:relative;
-   width:60%;
-   left:20%;
+   width:100%;
 }
 #child2{
    position:relative;
-   width:43%;
-   left:20%;
+   width:80%;
    color:#000000;
    float:left
 }
 #child3{
    position:relative;
-   width:60%;
-   left:20%;
+   width:100%;
 }
+
+a:link {
+			color:blue;
+			text-decoration:none;
+		}
+		a:visited {
+			color:blue;
+			text-decoration:none;
+		}
+		a:hover {
+			color:blue;
+			text-decoration:none;
+		}
+		a:active {
+			color:blue;
+			text-decoration:none;
+		}
 
 </style>
 <!--[if !mso]>
@@ -63,7 +77,7 @@ span.apple-style-span
        var y=dt.getYear()+1900;
        var mm=dt.getMonth()+1;
        var d=dt.getDate();
-       var weekday=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+       var weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
        var day=dt.getDay();
        var h=dt.getHours();
        var m=dt.getMinutes();
@@ -73,29 +87,56 @@ span.apple-style-span
        if(m<10){m="0"+m;}
        if(s<10){s="0"+s;}
 
-       document.getElementById("timeShow").innerHTML =  "现在时间："+y+"年"+mm+"月"+d+"日"+weekday[day]+" "+h+":"+m+":"+s+"";
+       document.getElementById("timeShow").innerHTML = y+"-"+mm+"-"+d+"&nbsp &nbsp"+h+":"+m+":"+s+ "&nbsp &nbsp" +weekday[day];
        t = setTimeout(time,1000); //设定定时器，循环执行 
     }
 </script>
   <style>
 
-    .time1{width:100%;  background:#ffffff; line-height:400%; color:#f5351A; text-align:left;}
+    .time1{width:100%;  background:#ffffff; line-height:100%; color:blue; text-align:left;}
 
   </style>
 </HEAD>
-<BODY bgColor=#FFFFFF leftMargin=0 topMargin=0 link="#0000FF" vlink="#800080" style="text-align: center"  rightmargin="0" bottommargin="0" marginwidth="15" marginheight="15" alink="#FF0000">
-<div id="container">        
-        			
+<BODY bgColor=#FFFFFF leftMargin=0 topMargin=0 link="#0000FF" vlink="#800080" style="text-align: center; font-family:Times New Roman, STSong;"  rightmargin="0" bottommargin="0" marginwidth="15" marginheight="15" alink="#FF0000">
+<div id="container"> 
+        <table width=100%>
+		 <tr>
+		 <td width=2%> &nbsp;</td>
+		 <td width=8%> <img src="./images/3.jpg" width=130pt,height=80pt></td>
+		 <td width=40%>
+		    
+		     <div id = "child2">
+		        <p style="line-height: 200%; text-indent:0px; margin-top:0; margin-bottom:0;width:100%" align="left" >
+				<font size="5"><strong >Xiaogang Dong </font>
+				</br>
+                <font size="3"><strong >Ph.D </font>
+				</p>
+				<p style="line-height: 200%; text-indent:0px; margin-top:0; margin-bottom:0;width:100%" align="left">
+				Email:<strong>dxg110@aliyun.com</p> 
+				</br>	            
+                <p style="line-height: 200%; text-indent:0px; margin-top:0; margin-bottom:0;width:100%" align="left">
+				Research Interests: <strong>Wireless communication, Edge computing, Mobile Computing, Optimization Design, Evolutionary Computing, Machine learning </p> 
+				</br>
+				<p style="line-height: 300%; text-indent:0px; margin-top:0; margin-bottom:0;width:100%" align="left"><div id="timeShow" class="time1"></p>
+		     </div>
+		 </td>
+		 <td width=50% align="left">		    
+		     <marquee onmouseover='this.stop()' onmouseout='this.start()' direction="up" behavior="scroll" scrollamount="1" scrolldelay="0" loop="-1" width="75%" height="180" bgcolor="#FFFFFF" style="font-family: Times New Roman, STSong;font-size:18;">
+                 
+				 <img src ="./images/zan.gif" width=20,height=25> Our paper "Computation Offloading Based on Deep Reinforcement Learning for UAV-MEC Network" was accepted by International Conference on Algorithms and Architectures for Parallel Processing (ICA3PP 2023) workshop (IUAVNet) on 2023-8-16.
+				 </br></br>
+				 <img src ="./images/zan.gif" width=20,height=25> Our paper "Computation Power Maximization for Mobile Edge Computing Enabled Dense Network" was accepted by Computer Networks on 2022-11-5.
+				 </br></br>
+				 <img src ="./images/zan.gif" width=20,height=25> Our paper "Optimizing computation offloading under heterogeneous delay requirements for wireless powered mobile edge computing" was accepted by Wireless Networks on 2022-7-15.
+				
+			 </marquee>		    
+		 </td>  
+		 </tr>
+		</table>
 		
-		<div id = "child2">
-		<p style="line-height: 200%; text-indent:0px; margin-top:0; margin-bottom:0;width:25%" align="center" >
-				<strong>Xiaogang Dong</p> 
-	    <p style="line-height: 200%; text-indent:0px; margin-top:0; margin-bottom:0;width:25%" align="center">
-				<strong>Email:dxg110@aliyun.com</p> 
-		</div>
-		<div id = "child2" align="left"><div id="timeShow" class="time1"></div> </div>
-		<hr style="border:2 dashed #987cb9" width="60%" color=#987cb9 SIZE=2>
+		<hr style="border:3  #987cb9" type="double" width="100%" color=#987cb9 SIZE=2>
 		
+
 		<!--<div id = "child1" style="background:url(./img/bimg.jpg);">
 		<p align="left"><font face="Times New Roman">&nbsp; ▏<a href="#"><span style="text-decoration: none">链接1</span></a> ▏ 
 				 <a href="#"><span style="text-decoration: none">链接2</span></a> ▏ </font></p>
@@ -104,91 +145,108 @@ span.apple-style-span
 		-->
 		<div id = "child3">
 		
-				<p style="line-height: 150%" align="left"><font face="Times New Roman"><b>Journal papers:</b></font></p>
+				<p style="line-height: 150%" align="left"><font face="Times New Roman" size =5"><b>Journal papers:</b></font> <font face="Times New Roman" size ="3"><b>("*":Corresponding author)</b></font></p>
 				<ul>
-				   <ol>
 				    <li style="text-align:justify">
 					<p style="text-indent:0pt;layout-grid-mode:char; margin-left:11.35pt; margin-right:11.35pt; margin-top:3.75pt; margin-bottom:1.11pt; line-height:150%">
-					<span style="font-family: Times New Roman">
-					Zheng Wan, Xiaogang Dong*, Changshou Deng. <strong>Optimizing computation offloading under heterogeneous delay requirements for wireless powered mobile edge computing[J].</strong>  Wireless Networks, In Press.(Corresponding author)</span></li>
+					<span >
+					Zheng Wan, <strong>Xiaogang Dong* </strong>. <strong>Computation Power Maximization for Mobile Edge Computing Enabled Dense Network[J]. </strong> Computer Networks, vol 220:109458, 2023, DOI:https://doi.org/10.1016/j.comnet.2022.109458. (CCF推荐B类期刊, SCI 二区, JCR Q1, IF:5.493).</span></li>
+					
+				    <li style="text-align:justify">
+					<p style="text-indent:0pt;layout-grid-mode:char; margin-left:11.35pt; margin-right:11.35pt; margin-top:3.75pt; margin-bottom:1.11pt; line-height:150%">
+					<span >
+					Hu Peng, Zhenzhen Xu, Jiayao Qian, <strong>Xiaogang Dong </strong>, Wei Li, Zhijian Wu. <strong>Evolutionary constrained optimization with hybrid constraint-handling technique[J]. </strong> Expert Systems with Applications, 2022:118660.</span></li>
+				   
+				    <li style="text-align:justify">
+					<p style="text-indent:0pt;layout-grid-mode:char; margin-left:11.35pt; margin-right:11.35pt; margin-top:3.75pt; margin-bottom:1.11pt; line-height:150%">
+					<span >
+					Zheng Wan, <strong>Xiaogang Dong*</strong>, Changshou Deng. <strong>Optimizing computation offloading under heterogeneous delay requirements for wireless powered mobile edge computing[J].</strong>  Wireless Networks, August, 2022, DOI:
+				https://doi.org/10.1007/s11276-022-03075-w. (CCF推荐C类期刊, SCI, JCR Q2/Q3, IF: 2.701)</span></li>
 					
 					<li style="text-align:justify">
 					<p style="text-indent:0pt;layout-grid-mode:char; margin-left:11.35pt; margin-right:11.35pt; margin-top:3.75pt; margin-bottom:1.11pt; line-height:150%">
-					<span style="font-family: Times New Roman">
-					Xiaogang Dong*, Zheng Wan, Changshou Deng, Wenying Wen, Yuxuan Luo. <strong>Intelligent Time Allocation for Wireless Power Transfer in Wireless-Powered Mobile Edge Computing[J].</strong>  Wireless Communications & Mobile Computing, In Press.</span></li>
+					<span >
+					<strong>Xiaogang Dong</strong>, Zheng Wan, Changshou Deng, Wenying Wen, Yuxuan Luo. <strong>Intelligent Time Allocation for Wireless Power Transfer in Wireless-Powered Mobile Edge Computing[J].</strong>  Wireless Communications & Mobile Computing, vol. 2022, Article ID 6722848, 13 pages, 2022, DOI: https://doi.org/10.1155/2022/6722848, (CCF推荐C类期刊, SCI, JCR Q3, IF: 2.146) .</span></li>
 				   
 					<li style="text-align:justify">
 					<p style="text-indent:0pt;layout-grid-mode:char; margin-left:11.35pt; margin-right:11.35pt; margin-top:3.75pt; margin-bottom:1.11pt; line-height:150%">
-					<span style="font-family: Times New Roman">
-					Changshou Deng, Xiaogang Dong*, Yucheng Tan, and Hu Peng. <strong>Enhanced Differential Evolution Algorithm with Local Search
-		Based on Hadamard Matrix[J].</strong>  Computational Intelligence and Neuroscience, vol. 2021.(Corresponding author)<a href ="./paper/8930980.pdf">[PDF]</a></span></li>
+					<span >
+					Changshou Deng, <strong>Xiaogang Dong*</strong>, Yucheng Tan, Hu Peng. <strong>Enhanced Differential Evolution Algorithm with Local Search
+		Based on Hadamard Matrix[J].</strong>  Computational Intelligence and Neuroscience, vol. 2021. DOI: https://doi.org/10.1155/2021/8930980. (SCI, JCR Q2/Q3, IF: 3.120) <a href ="./paper/8930980.pdf">[PDF]</a></span></li>
 					
 					<li style="text-align:justify">
 					<p style="text-indent:0pt;layout-grid-mode:char; margin-left:11.35pt; margin-right:11.35pt; margin-top:3.75pt; margin-bottom:1.11pt; line-height:150%" >
-					<span style="font-family: Times New Roman">
-					Xiaogang Dong,Changshou Deng,Yucheng Tan. <strong>Dynamic Differential Evolution with Oppositional Orthogonal Crossover for Large Scale Optimization Problems[J].</strong> International Journal of Computing Science and Mathematics,2017,8(5):414-424.<a href ="./paper/IJCSM080503_146501.pdf">[PDF]</a></span></li>
+					<span >
+					<strong>Xiaogang Dong</strong>, Changshou Deng, Yucheng Tan. <strong>Dynamic Differential Evolution with Oppositional Orthogonal Crossover for Large Scale Optimization Problems[J].</strong> International Journal of Computing Science and Mathematics, 2017, 8(5): 414-424.<a href ="./paper/IJCSM080503_146501.pdf">[PDF]</a></span></li>
 					
 					<li style="text-align:justify">
 					<p style="text-indent:0pt;layout-grid-mode:char; margin-left:11.35pt; margin-right:11.35pt; margin-top:3.75pt; margin-bottom:1.11pt; line-height:150%">
-					<span style="font-family: Times New Roman">
-					董小刚,邓长寿,袁斯昊,吴志健,张忠平. <strong>MapReduce模型下的分布式差分进化算法[J].</strong> 小型微型计算机系统, 2016,37(12):2695-2701.<a href ="./paper/MapReduce模型下的分布式差分进化算法.pdf">[PDF]</a></span></li>
+					<span >
+					<strong>董小刚</strong>, 邓长寿, 袁斯昊, 吴志健, 张忠平. <strong>MapReduce模型下的分布式差分进化算法[J].</strong> 小型微型计算机系统, 2016, 37(12): 2695-2701.<a href ="./paper/MapReduce模型下的分布式差分进化算法.pdf">[PDF]</a></span></li>
 					
 					<li style="text-align:justify">
 					<p style="text-indent:0pt;layout-grid-mode:char; margin-left:11.35pt; margin-right:11.35pt; margin-top:3.75pt; margin-bottom:1.11pt; line-height:150%" >
-					<span style="font-family: Times New Roman">
-					董小刚, 邓长寿, 谭毓澄, 彭虎, 吴志健.<strong>求解大规模优化问题的新型协同差分进化算法[J].</strong> 计算机应用，2017,37(11):3219-3225.<a href ="./paper/求解大规模优化问题的新型协同差分进化算法.pdf">[PDF]</a></span></li>
+					<span >
+					<strong>董小刚</strong>, 邓长寿, 谭毓澄, 彭虎, 吴志健. <strong>求解大规模优化问题的新型协同差分进化算法[J].</strong> 计算机应用, 2017, 37(11): 3219-3225.<a href ="./paper/求解大规模优化问题的新型协同差分进化算法.pdf">[PDF]</a></span></li>
 					
 					<li style="text-align:justify">
 					<p style="text-indent:0pt;layout-grid-mode:char; margin-left:11.35pt; margin-right:11.35pt; margin-top:3.75pt; margin-bottom:1.11pt; line-height:150%">
-					<span style="font-family: Times New Roman">
-					董小刚,邓长寿,谭毓澄,彭虎.<strong>求解大规模优化问题的正交反向混合差分进化算法[J]. </strong> 计算机应用研究,2016,06:1656-1661.<a href ="./paper/求解大规模优化问题的正交反向混合差分进化算法.pdf">[PDF]</a></span></li>
+					<span >
+					<strong>董小刚</strong>, 邓长寿, 谭毓澄, 彭虎. <strong>求解大规模优化问题的正交反向混合差分进化算法[J]. </strong> 计算机应用研究, 2016, 06: 1656-1661.<a href ="./paper/求解大规模优化问题的正交反向混合差分进化算法.pdf">[PDF]</a></span></li>
 					
 					<li style="text-align:justify">
 					<p style="text-indent:0pt;layout-grid-mode:char; margin-left:11.35pt; margin-right:11.35pt; margin-top:3.75pt; margin-bottom:1.11pt; line-height:150%">
-					<span style="font-family: Times New Roman">
-					董小刚,邓长寿,谢清,柯林,刘妍.<strong>求解高维优化问题的正交动态差分进化算法[J]. </strong> 计算机工程,2015,07:17-24.<a href ="./paper/求解高维优化问题的正交动态差分进化算法.pdf">[PDF].</a></span></li>
-				   </ol>
+					<span >
+					<strong>董小刚</strong>, 邓长寿, 谢清, 柯林, 刘妍. <strong>求解高维优化问题的正交动态差分进化算法[J]. </strong> 计算机工程, 2015, 07: 17-24.<a href ="./paper/求解高维优化问题的正交动态差分进化算法.pdf">[PDF].</a></span></li>
+				   
 				</ul>
-		<hr width="100%" color=#987cb9 SIZE=2>
+		
 		
 		<p style="line-height:150%" align="left">
-		<font face="Times New Roman"><b>Conference papers:</b></font></p>
+		<font face="Times New Roman" size =5"><b>Conference papers:</b></font>  <font face="Times New Roman" size ="3"><b>("*":Corresponding author)</b></font></p>
 		    <ul>
-				<ol>
+				<!--<ol>-->
+				   <li style="text-align:justify">
+					<p style="text-indent:0pt;layout-grid-mode:char; margin-left:11.35pt; margin-right:11.35pt; margin-top:3.75pt; margin-bottom:1.11pt; line-height:150%">
+					<span >
+					Zheng Wan, Yuxuan Lu, <strong>Xiaogang Dong*</strong>, Changshou Deng. <strong>Computation Offloading Based on Deep Reinforcement Learning for UAV-MEC Network[C].</strong> 2023 International Conference on Algorithms and Architectures for Parallel Processing (ICA3PP 2023) workshop (IUAVNet) (ICA3PP 2022, CCF推荐会议)
+					   , Virtual, July 25-27.</span></li> 
+				
 				    <li style="text-align:justify">
 					<p style="text-indent:0pt;layout-grid-mode:char; margin-left:11.35pt; margin-right:11.35pt; margin-top:3.75pt; margin-bottom:1.11pt; line-height:150%">
-					<span style="font-family: Times New Roman">
-					Xiaogang Dong, Zheng Wan, Changshou Deng. <strong>Optimization of Wireless Power Transfer for Wireless-Powered Mobile Edge Computin[C].</strong> 2022 International Conference on Computer Communications and Networks (ICCCN 2022)
+					<span >
+					<strong>Xiaogang Dong</strong>, Zheng Wan, Changshou Deng. <strong>Optimization of Wireless Power Transfer for Wireless-Powered Mobile Edge Computing[C].</strong> 2022 International Conference on Computer Communications and Networks (ICCCN 2022, CCF推荐会议)
 					   , Virtual, July 25-27.</span></li>  
 				
 				    <li style="text-align:justify">
 					<p style="text-indent:0pt;layout-grid-mode:char; margin-left:11.35pt; margin-right:11.35pt; margin-top:3.75pt; margin-bottom:1.11pt; line-height:150%">
-					<span style="font-family: Times New Roman">
-					Zheng Wan, Xiaogang Dong*, Changshou Deng. <strong>Deep Learning with Enhanced Convergence and its Application in MEC Task Offloading[C].</strong> 21st International Conference on Algorithms and Architectures for Parallel Processing(ICA3PP 2021)
-					   , Xiamen, China, Dec 3-5.(Corresponding author)</span></li>  
+					<span >
+					Zheng Wan, <strong>Xiaogang Dong*</strong>, Changshou Deng. <strong>Deep Learning with Enhanced Convergence and its Application in MEC Task Offloading[C].</strong> 21st International Conference on Algorithms and Architectures for Parallel Processing (ICA3PP 2021, CCF推荐会议)
+					   , Xiamen, China, Dec 3-5. </span></li>  
 				
 					<li style="text-align:justify">
 					<p style="text-indent:0pt;layout-grid-mode:char; margin-left:11.35pt; margin-right:11.35pt; margin-top:3.75pt; margin-bottom:1.11pt; line-height:150%">
-					<span style="font-family: Times New Roman">
-					Changshou Deng, Xiaogang Dong*, Yucheng Tan, Hu Peng. <strong>Variable Fragments Evolution in Differential Evolution[C].</strong> Advances in Swarm Intelligence - 12th International Conference {ICSI}
-					   2021, Qingdao, China, July 17-21.(Corresponding author)<a href ="#">[PDF]</a></span></li>  
+					<span >
+					Changshou Deng, <strong>Xiaogang Dong*</strong>, Yucheng Tan, Hu Peng. <strong>Variable Fragments Evolution in Differential Evolution[C].</strong> Advances in Swarm Intelligence - 12th International Conference {ICSI}
+					   2021, Qingdao, China, July 17-21.<a href ="#">[PDF]</a></span></li>  
 					   
 					<li style="text-align:justify">
 					<p style="text-indent:0pt;layout-grid-mode:char; margin-left:11.35pt; margin-right:11.35pt; margin-top:3.75pt; margin-bottom:1.11pt; line-height:150%">
-					<span style="font-family: Times New Roman">
-					Dong X G, Deng C S, Zhang Y, et al. <strong>Enhancing local search of differential evolution algorithm for high dimensional optimization problem[C].</strong> Control Conference. IEEE, 2015.（EI:20154601538719）</span></li>  
+					<span >
+					<strong>Dong X G</strong>, Deng C S, Zhang Y, et al. <strong>Enhancing local search of differential evolution algorithm for high dimensional optimization problem[C].</strong> Control Conference. IEEE, 2015.(EI:20154601538719)</span></li>  
 					
 					<li style="text-align:justify">
 					<p style="text-indent:0pt;layout-grid-mode:char; margin-left:11.35pt; margin-right:11.35pt; margin-top:3.75pt; margin-bottom:1.11pt; line-height:150%">
-					<span style="font-family: Times New Roman">
-					Dong X G, Liu Y, Deng C S. <strong>Improved Differential Evolution Algorithm and its Application in Complex Function Optimization[C]</strong> 中国控制与决策会议. 2014:3698-3701.（EI:20143218039674）</span></li>  
+					<span >
+					<strong>Dong X G</strong>, Liu Y, Deng C S. <strong>Improved Differential Evolution Algorithm and its Application in Complex Function Optimization[C]</strong> 中国控制与决策会议. 2014:3698-3701.(EI:20143218039674)</span></li>  
 					
-				</ol>
+				<!--</ol>-->
 			</ul>
 			<hr width="100%" color=#987cb9 SIZE=2>
 		
 		<p style="line-height: 150%" align="right">
 		        
+				
 				<!--<font face="Times New Roman">更新日期: 2021.11.21</font></p> -->
 		</div>
 		<div id="timeShow" class="time1"></div>
