@@ -11,8 +11,12 @@
 <style fprolloverstyle>A:hover {color: #008080}
 #container{
    position:relative;
-   width:100%;
+   width:60%;
+   left:20%;
+   right:20%;
    height:auto;
+   display: grid;
+   place-items: center;
 }
 #child1{
    position:relative;
@@ -98,12 +102,12 @@ span.apple-style-span
   </style>
 </HEAD>
 <BODY bgColor=#FFFFFF leftMargin=0 topMargin=0 link="#0000FF" vlink="#800080" style="text-align: center; font-family:Times New Roman, STSong;"  rightmargin="0" bottommargin="0" marginwidth="15" marginheight="15" alink="#FF0000">
-<div id="container"> 
-        <table width=100%>
+<div id="container" > 
+       	 <table width=100%>
 		 <tr>
-		 <td width=2%> &nbsp;</td>
-		 <td width=8%> <img src="./images/3.jpg" width=130pt,height=80pt></td>
-		 <td width=40%>
+		 <td width=5%> &nbsp;</td>
+		 <td width=15%> <img src="./images/3.jpg" width=130pt,height=80pt></td>
+		 <td width=55%>
 		    
 		     <div id = "child2">
 		        <p style="line-height: 200%; text-indent:0px; margin-top:0; margin-bottom:0;width:100%" align="left" >
@@ -115,25 +119,15 @@ span.apple-style-span
 				Email:<strong>dxg110@aliyun.com</p> 
 				</br>	            
                 <p style="line-height: 200%; text-indent:0px; margin-top:0; margin-bottom:0;width:100%" align="left">
-				Research Interests: <strong>Wireless communication, Edge computing, Mobile Computing, Optimization Design, Evolutionary Computing, Machine learning </p> 
+				Research Interests: <br> &nbsp &nbsp &nbsp&nbsp &nbsp <strong>Wireless communication, Edge computing, Mobile Computing, 
+				                    <br> &nbsp &nbsp &nbsp&nbsp &nbsp Optimization Design, Evolutionary Computing, Machine learning </p> 
 				</br>
 				<p style="line-height: 300%; text-indent:0px; margin-top:0; margin-bottom:0;width:100%" align="left"><div id="timeShow" class="time1"></p>
 		     </div>
 		 </td>
-		 <td width=50% align="left">		    
-		     <marquee onmouseover='this.stop()' onmouseout='this.start()' direction="up" behavior="scroll" scrollamount="1" scrolldelay="0" loop="-1" width="75%" height="180" bgcolor="#FFFFFF" style="font-family: Times New Roman, STSong;font-size:18;">
-                 
-				 <img src ="./images/zan.gif" width=20,height=25> Our paper "Computation Offloading Based on Deep Reinforcement Learning for UAV-MEC Network" was accepted by International Conference on Algorithms and Architectures for Parallel Processing (ICA3PP 2023) workshop (IUAVNet) on 2023-8-16.
-				 </br></br>
-				 <img src ="./images/zan.gif" width=20,height=25> Our paper "Computation Power Maximization for Mobile Edge Computing Enabled Dense Network" was accepted by Computer Networks on 2022-11-5.
-				 </br></br>
-				 <img src ="./images/zan.gif" width=20,height=25> Our paper "Optimizing computation offloading under heterogeneous delay requirements for wireless powered mobile edge computing" was accepted by Wireless Networks on 2022-7-15.
-				
-			 </marquee>		    
-		 </td>  
+		 <td width=25%><img src="./images/logo9.jpg" width=160pt,height=100pt></td>		 
 		 </tr>
 		</table>
-		
 		<hr style="border:3  #987cb9" type="double" width="100%" color=#987cb9 SIZE=2>
 		
 
@@ -146,7 +140,18 @@ span.apple-style-span
 		<div id = "child3">
 		
 				<p style="line-height: 150%" align="left"><font face="Times New Roman" size =5"><b>Journal papers:</b></font> <font face="Times New Roman" size ="3"><b>("*":Corresponding author)</b></font></p>
-				<ul>
+				<ol>
+				    <li style="text-align:justify">
+					  <p style="text-indent:0pt;layout-grid-mode:char; margin-left:11.35pt; margin-right:11.35pt; margin-top:3.75pt; margin-bottom:1.11pt; line-height:150%">
+					  <span >
+					  Xiaogang Dong, Zheng Wan*, Changshou Deng, Shenglu Zhao, Xiwei Dong. <strong>Bilevel Fairness Strategy Based Computation Efficiency
+Maximization for NOMA-Aided Edge Network[J]. </strong> Physical Communication. Accept（on Printing） (SCI 四区, JCR Q2).</span></li>
+				
+				    <li style="text-align:justify">
+					  <p style="text-indent:0pt;layout-grid-mode:char; margin-left:11.35pt; margin-right:11.35pt; margin-top:3.75pt; margin-bottom:1.11pt; line-height:150%">
+					  <span >
+					  Zheng Wan, Shenglu Zhao*, Cuifang Wang, Yifeng Tan, <strong>Xiaogang Dong</strong>. <strong>Joint DRL and GCN-based Cloud-Edge-End collaborative cache optimization for metaverse scenarios[J]. </strong> Computer Networks, vol 263:111239, 2025, DOI:https://doi.org/10.1016/J.COMNET.2025.111239. (CCF推荐B类期刊, SCI 三区, JCR Q1).</span></li>
+				
 				    <li style="text-align:justify">
 					<p style="text-indent:0pt;layout-grid-mode:char; margin-left:11.35pt; margin-right:11.35pt; margin-top:3.75pt; margin-bottom:1.11pt; line-height:150%">
 					<span >
@@ -199,13 +204,14 @@ span.apple-style-span
 					<span >
 					<strong>董小刚</strong>, 邓长寿, 谢清, 柯林, 刘妍. <strong>求解高维优化问题的正交动态差分进化算法[J]. </strong> 计算机工程, 2015, 07: 17-24.<a href ="./paper/求解高维优化问题的正交动态差分进化算法.pdf">[PDF].</a></span></li>
 				   
-				</ul>
+				</ol>
 		
 		
 		<p style="line-height:150%" align="left">
 		<font face="Times New Roman" size =5"><b>Conference papers:</b></font>  <font face="Times New Roman" size ="3"><b>("*":Corresponding author)</b></font></p>
-		    <ul>
+		    <ol>
 				<!--<ol>-->
+				   			
 				   <li style="text-align:justify">
 					<p style="text-indent:0pt;layout-grid-mode:char; margin-left:11.35pt; margin-right:11.35pt; margin-top:3.75pt; margin-bottom:1.11pt; line-height:150%">
 					<span >
@@ -241,7 +247,7 @@ span.apple-style-span
 					<strong>Dong X G</strong>, Liu Y, Deng C S. <strong>Improved Differential Evolution Algorithm and its Application in Complex Function Optimization[C]</strong> 中国控制与决策会议. 2014:3698-3701.(EI:20143218039674)</span></li>  
 					
 				<!--</ol>-->
-			</ul>
+			</ol>
 			<hr width="100%" color=#987cb9 SIZE=2>
 		
 		<p style="line-height: 150%" align="right">
